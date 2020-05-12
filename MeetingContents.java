@@ -1,4 +1,4 @@
-package tennis;
+package tennis_scoreboard;
 
 public class MeetingContents {
 

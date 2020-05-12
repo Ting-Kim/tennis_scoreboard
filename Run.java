@@ -1,4 +1,4 @@
-package tennis;
+package tennis_scoreboard;
 
 import tennis.project1.Set;
 
