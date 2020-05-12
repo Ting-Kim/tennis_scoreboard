@@ -1,34 +1,30 @@
-package tennis;
+package tennis_scoreboard;
 
-public class Point {
-	static int ASetCnt = 0;
-	static int BSetCnt = 0;
-	static int AGameScore = 0;
-	static int BGameScore = 0;
-	
-	static void play(){
+import tennis.project1.IGame;
+import tennis.project1.Set;
+
+//랜덤으로 포인트 득점
+public class Point implements IGame{
+	static int gameWinner = 0;
+
+	public static int pointPlay() {
+
 		
-		switch (Setting.tieBreak) {
-		case 'y':
-		do {
-			Set.point();
-			if (AGameScore == 6 && BGameScore == 6) {	//	6:6 동점 상황에 tiebreak 발생
-				TieGame.tie();
-			}
-		} while (Math.abs(AGameScore-BGameScore) < 2 || AGameScore < 6 || BGameScore < 6);	
-		//	2점차 && 두 팀 모두 6점 이상인 경우 종료.
+		return 0;
 		
-		if (Point.AGameScore > Point.BGameScore) ASetCnt++;
-		else BSetCnt++;
-			
-			break;
-			
-			
-			
-		case 'n':
-			break;
-		}
+		
+		//
+	}
+
+	@Override
+	public void pointWinner(int p) {
+		if (p == 1) Set.ApointScore ++; 
+		else Set.BpointScore++;
+	}
+
+	@Override
+	public void dispScoreBoard() {
+		// TODO Auto-generated method stub
 		
 	}
 }
-
